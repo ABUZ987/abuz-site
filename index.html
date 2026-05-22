@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>ABUZ — Visual Artist — Tahiti</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* --- STYLES DE BASE --- */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin:0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background:#000;
+  color:#fff;
+  line-height: 1.6;
+}
+h1,h2,p { margin:0; }
+a { color:#fff; text-decoration:none; transition: opacity 0.3s; }
+a:hover { opacity: 0.7; }
+
+.section {
+  padding:100px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+h2 {
+  font-size: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* --- HEADER FIXE --- */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.header-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { font-size:24px; font-weight:bold; letter-spacing:2px; }
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+
+/* --- HERO SECTION --- */
+.hero {
+  height: 100vh;
+  /* MODIFICATION ICI : On a enlevé images/ */
+  background:
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)),
+    url('hero.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  margin-top: -85px;
+}
+.hero h1 { font-size:80px; letter-spacing:8px; text-transform: uppercase; }
+.hero p { margin-top:15px; font-size: 18px; opacity:0.8; letter-spacing: 1px;}
+
+/* --- GALERIE OPTIMISÉE --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 30px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 1 / 1;
+}
+.gallery-item img {
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* --- ABOUT --- */
+.about {
+  max-width:700px;
+  font-size: 18px;
+  opacity:0.9;
+  margin:auto;
+  text-align: center;
+}
+
+/* --- CONTACT --- */
+.contact {
+  text-align: center;
+}
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 18px;
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 768px) {
+  .header-container { flex-direction: column; gap: 15px; text-align: center; }
+  .hero h1 { font-size: 50px; }
+  .section { padding: 60px 20px; }
+  .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <a href="#" class="logo">ABUZ</a>
+    <nav class="nav-links">
+      <a href="#gallery">Œuvres</a>
+      <a href="#about">À Propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>ABUZ</h1>
+    <p>Visual Artist — Tahiti</p>
+    <p>Contemporary Polynesian narratives in public space</p>
+  </div>
+</section>
+
+<section id="gallery" class="section gallery">
+  <h2>Selected Works</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="work1.jpg" alt="Blue Tuna Interior Mural"></div>
+    <div class="gallery-item"><img src="work2.jpg" alt="mother bluewhale and calf"></div>
+    <div class="gallery-item"><img src="work3.jpg" alt="Teahupoo installation"></div>
+    <div class="gallery-item"><img src="work4.jpg" alt="Geometric and Graff Panels"></div>
+    <div class="gallery-item"><img src="work5.jpg" alt="Shark Mural in Progress"></div>
+    <div class="gallery-item"><img src="work6.jpg" alt="the end of the road gallery painting on surfboards"></div>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <h2>À Propos</h2>
+  <p>
+  ABUZ is a multidisciplinary visual artist based in Tahiti.
+  His work explores the intersection of Polynesian cultural heritage
+  and contemporary visual language through murals, paintings,
+  and site-specific projects.
+  </p>
+</section>
+
+<section id="contact" class="section contact">
+  <h2>Contact</h2>
+  <div class="contact-links">
+    <a href="mailto:abuz.tahiti@gmail.com">abuz1@hotmail.com</a>
+    <a href="https://www.instagram.com/abuz_987/" target="_blank">Instagram</a>
+  </div>
+</section>
+
+</body>
+</html>
